@@ -2,6 +2,7 @@
   z-index: 99;
   position: sticky;
   top: 0;
+  background-color: #7b7b7b;
 }
 .h-container {
   padding-top: 1rem;
