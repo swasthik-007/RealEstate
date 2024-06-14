@@ -1,10 +1,12 @@
 generator client {
     provider = "prisma-client-js"
 }
+
 datasource db {
     provider = "mongodb"
     url      = env("DATABASE_URL")
 }
+
 model User {
     id               String      @id @default(auto()) @map("_id") @db.ObjectId
     name             String?
@@ -14,6 +16,7 @@ model User {
     favResidenciesID String[]    @db.ObjectId
     ownedResidencies Residency[] @relation("Owner")
 }
+
 model Residency {
     id          String   @id @default(auto()) @map("_id") @db.ObjectId
     title       String
